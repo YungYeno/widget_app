@@ -49,59 +49,49 @@ class WrapWidget extends StatelessWidget {
         direction: Axis.vertical,
         spacing: 8.0,
         children: <Widget>[
+          InkWell(
+            onTap: () {
+              print('Clicked op de eerste widget!');
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => SecondRoute()),
+              );
+            },
+            child: Center(child: Text('Eerste widget', style: TextStyle(
+                color: Colors.blue,
+                fontSize: 20,
+                decoration: TextDecoration.underline
+            )))
+          ),
           Container(
             color: Colors.blue,
             width: 100,
             height: 100,
-            child: Center(child: Text("Een wrap", textScaleFactor: 2.5,))
+            child: Center(child: Text("Een wrap", textScaleFactor: 2.5,)),
           ),
           Container(
             color: Colors.red,
             width: 100,
             height: 100,
-            child: Center(child: Text("Een wrap", textScaleFactor: 2.5,)),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => SecondRoute()),
-              );
-            },
+            child: Center(child: Text("Een wrap", textScaleFactor: 1,))
           ),
           Container(
             color: Colors.teal,
             width: 100,
             height: 100,
-            child: Center(child: Text("Een wrap", textScaleFactor: 2.5,)),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => SecondRoute()),
-              );
-            },
+            child: Center(child: Text("Een wrap", textScaleFactor: 2.5,))
           ),
           Container(
             color: Colors.indigo,
             width: 100,
             height: 100,
-            child: Center(child: Text("Een wrap", textScaleFactor: 2.5,)),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => SecondRoute()),
-              );
-            },
+            child: Center(child: Text("Een wrap", textScaleFactor: 2.5,))
           ),
           Container(
             color: Colors.orange,
             width: 100,
             height: 100,
-            child: Center(child: Text("Een wrap", textScaleFactor: 2.5,)),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => SecondRoute()),
-              );
-            },
+            child: Center(child: Text("Een wrap", textScaleFactor: 2.5,))
           ),
         ],
       ),
